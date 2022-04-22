@@ -6,14 +6,16 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of shanban is to …
+**WORK IN PROGRESS**
+
+`htmlwidgets` for [jkanban](https://github.com/riktar/jkanban)
 
 ## Installation
 
-You can install the development version of shanban like so:
+You can install the development version of `{shanban}` like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+remotes::install_github("thinkr-open/shanban")
 ```
 
 ## Example
@@ -21,7 +23,7 @@ You can install the development version of shanban like so:
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-pkgload::load_all()
+library(shanban)
 kanban(
   boards = list(
     Board$new(
@@ -70,7 +72,7 @@ one_board <- function(
 ```
 
 ``` r
-pkgload::load_all()
+library(shanban)
 options(shiny.port = httpuv::randomPort())
 library(shiny)
 ui <- function(request) {
@@ -132,7 +134,7 @@ server <- function(
   observeEvent(input$additem, {
     addElement(
       "x",
-      boardID = "one",
+      boardId = "one",
       id = input$id,
       title = input$title
     )

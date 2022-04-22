@@ -36,7 +36,7 @@ remotes::install_github("thinkr-open/shanban")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r}
-pkgload::load_all()
+library(shanban)
 kanban(
   boards = list(
     Board$new(
@@ -86,7 +86,7 @@ one_board <- function(
 ```
 
 ```{r example}
-pkgload::load_all()
+library(shanban)
 options(shiny.port = httpuv::randomPort())
 library(shiny)
 ui <- function(request) {
